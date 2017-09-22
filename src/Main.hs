@@ -43,7 +43,7 @@ data Puzzle =
 
 instance Show Puzzle where
   show (Puzzle _ discovered guessed) =
-    intersperse ' ' $ fmap renderPuzzleChar discovered
+    (intersperse ' ' $ fmap renderPuzzleChar discovered)
     ++ " Guessed so far: " ++ guessed
 
 freshPuzzle :: String -> Puzzle
